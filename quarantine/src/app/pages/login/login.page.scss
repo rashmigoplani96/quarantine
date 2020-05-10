@@ -43,6 +43,15 @@
     }
 }
 
+#otp {
+    ion-input {
+        max-width: 20%;
+        margin-right: 4%;
+        border-bottom: 1px solid rgb(175, 170, 170);
+        text-align: center;
+    }
+}
+
 .home-logo {
     display: block;
     margin-left: auto;
@@ -156,6 +165,8 @@ ion-slides{
 
 }
 
+
+
 ion-text {
     font-size: 13px;
 }
@@ -163,4 +174,72 @@ ion-text {
 .ripple-parent {
     position: relative;
     overflow: hidden;
+}
+
+ion-slides {
+    --bullet-background: rgb(5, 3, 3);
+    --bullet-background-active: white;
+}
+
+.login-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    color: var(--ion-color-primary);
+}
+
+.signup-button {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 1000;
+    color: var(--ion-color-primary);
+}
+
+.verifyOtp{
+
+    min-height: 30vh;   
+    padding-bottom: 15px;  
+    background: transparent;
+    color: grey;
+    text-align: center;
+    ion-input{
+      border: 1px solid rgb(175, 170, 170);
+  
+
+    }
+
+    input[type="text"] {  
+        text-align: right; 
+    } 
+
+
+    .verify{
+ 
+    width:60vw;
+    height: 5vh;
+    }
+}
+
+
+
+.popup_overlay {
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease all;
+    transform: scale(0.9);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1)
+    }
 }
